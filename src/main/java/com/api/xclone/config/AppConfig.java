@@ -28,10 +28,10 @@ public class AppConfig {
         .and()
         .authorizeHttpRequests(Authorize -> Authorize.requestMatchers("/api/**").authenticated()
             .anyRequest().permitAll())
-        .addFilterBefore(null, BasicAuthenticationFilter.class)
+        .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
         .csrf().disable()
-        .cors().configurationSource(corsConfigrationSoruce()).add()
-        .httpBasic().and().fromLogin();
+        .cors().configurationSource(corsConfigrationSoruce()).and()
+        .httpBasic().and().formLogin();
     return http.build();
   }
 
