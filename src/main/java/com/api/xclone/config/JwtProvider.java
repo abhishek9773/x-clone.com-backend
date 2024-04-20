@@ -5,11 +5,13 @@ import java.util.Date;
 import javax.crypto.SecretKey;
 
 import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
+@Service
 public class JwtProvider {
   SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
 
