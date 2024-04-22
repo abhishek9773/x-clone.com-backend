@@ -1,7 +1,5 @@
 package com.api.xclone.model;
 
-import com.api.xclone.model.User;
-
 import java.util.List;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
