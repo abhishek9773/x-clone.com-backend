@@ -3,6 +3,8 @@ package com.api.xclone.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.api.xclone.model.User;
+
 import lombok.Data;
 
 @Data

@@ -14,7 +14,7 @@ public interface TwitService {
 
   public List<Twit> findAllTwit();
 
-  public Twit retTwit(Long twitId, User user) throws UserException, TwitException;
+  public Twit retwit(Long twitId, User user) throws UserException, TwitException;
 
   public Twit findById(Long twitId) throws TwitException;
 
