@@ -27,7 +27,7 @@ public class UserDtoMapper {
 
   }
 
-  private static List<UserDto> toUserDtos(List<User> followers) {
+  public static List<UserDto> toUserDtos(List<User> followers) {
     List<UserDto> userDtos = new ArrayList<>();
     for (User user : followers) {
       UserDto userDto = new UserDto();

@@ -13,7 +13,7 @@ import com.api.xclone.model.User;
 import com.api.xclone.request.TwitReplyRequest;
 
 @Service
-public class TwitServiceImplementtation implements TwitService {
+public class TwitServiceImplementation implements TwitService {
 
   @Autowired
   private com.api.xclone.repository.TwitRepository twitRepository;
@@ -40,7 +40,7 @@ public class TwitServiceImplementtation implements TwitService {
   }
 
   @Override
-  public Twit retTwit(Long twitId, User user) throws UserException, TwitException {
+  public Twit retwit(Long twitId, User user) throws UserException, TwitException {
     Twit twit = findById(twitId);
     if (twit.getRetwitUser().contains(user)) {
       twit.getRetwitUser().remove(user);
